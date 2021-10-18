@@ -1,0 +1,22 @@
+* {
+  margin: auto;
+}
+.Board3x3 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.Board4x4 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Board5x5 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+}

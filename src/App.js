@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useRef, useState } from "react";
+import "./App.css";
+
+import Game from "./components/Game";
 
 function App() {
+  const [state, setState] = useState(9);
+  const childFunc = useRef();
+
+  const clickHandler = (tiles) => {
+    setState(tiles);
+    childFunc.current.refresh();
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="buttons">
+        <button onClick={() => clickHandler(9)}>3X3</button>
+        <button onClick={() => clickHandler(16)}>4X4</button>
+        <button onClick={() => clickHandler(25)}>5X5</button>
+      </div>
+      <Game ref={childFunc} tiles={state}></Game>
     </div>
   );
 }

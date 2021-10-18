@@ -1,7 +1,23 @@
 .App {
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
+.buttons {
+  width: 200px;
+  margin: 20px auto;
+  display: flex;
+}
+.buttons button {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
